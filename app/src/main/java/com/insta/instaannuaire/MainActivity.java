@@ -18,7 +18,7 @@ public class MainActivity extends ActionBarActivity {
         setContentView(R.layout.activity_main);
 
 
-
+//test
         final Button button = (Button) findViewById(R.id.button_connexion1);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
