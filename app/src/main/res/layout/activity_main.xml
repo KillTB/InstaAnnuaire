@@ -1,0 +1,113 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    android:clickable="false"
+    android:background="#ffff9126">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:weightSum="1"
+        android:id="@+id/main_layout">
+
+        <ImageView
+            android:layout_width="189dp"
+            android:layout_height="180dp"
+            android:id="@+id/imageView"
+            android:layout_gravity="center_horizontal"
+            android:background="@mipmap/logo_insta"
+            android:layout_weight="0.12" />
+
+        <TextView
+            android:layout_width="318dp"
+            android:layout_height="wrap_content"
+            android:text="Annuaire des Etudiants"
+            android:id="@+id/textView"
+            style="@style/Base.TextAppearance.AppCompat.Title"
+            android:textAlignment="textEnd"
+            android:textIsSelectable="false"
+            android:phoneNumber="false"
+            android:elegantTextHeight="true"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp" />
+
+        <TextView
+            android:layout_width="268dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/error_connexion"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_weight="0.26"
+            android:editable="false"
+            android:textColor="#ffe122ff"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Email :"
+            android:id="@+id/textView2"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp" />
+
+        <EditText
+            android:layout_width="294dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editText"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffd9d9d9" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Password :"
+            android:id="@+id/textView3"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp" />
+
+        <EditText
+            android:layout_width="296dp"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:ems="10"
+            android:id="@+id/editText2"
+            android:layout_gravity="center_horizontal"
+            android:background="#ffd9d9d9"
+            android:password="true" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="336dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center_horizontal|right"
+            android:id="@+id/button_connexion"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:weightSum="1"
+            android:layout_margin="5dp">
+
+            <Button
+                android:layout_width="104dp"
+                android:layout_height="74dp"
+                android:text="New Button"
+                android:id="@+id/button_connexion1" />
+
+            <Button
+                android:layout_width="104dp"
+                android:layout_height="match_parent"
+                android:text="New Button"
+                android:id="@+id/button2" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>
