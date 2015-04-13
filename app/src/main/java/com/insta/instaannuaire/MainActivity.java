@@ -22,13 +22,15 @@ public class MainActivity extends ActionBarActivity {
         final Button button = (Button) findViewById(R.id.button_connexion1);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                final TextView error = (TextView) findViewById(R.id.error_connexion);
-                error.append("Erreur de connexion");
-                //Intent activityChangeIntent = new Intent(MainActivity.this, MainActivity.class);
+              //  final TextView error = (TextView) findViewById(R.id.error_connexion);
+                //error.clearComposingText();
+                //error.append("Erreur de connexion");
 
-                // currentContext.startActivity(activityChangeIntent);
+                Intent activityChangeIntent = new Intent(MainActivity.this, IndexActivity.class);
 
-               // MainActivity.this.startActivity(activityChangeIntent);
+                 //currentContext.startActivity(activityChangeIntent);
+
+                MainActivity.this.startActivity(activityChangeIntent);
             }
         });
 
