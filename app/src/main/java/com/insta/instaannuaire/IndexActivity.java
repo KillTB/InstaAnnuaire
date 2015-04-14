@@ -23,8 +23,11 @@ public class IndexActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
+        String test="test";
+        final TextView messageAccueil = (TextView) findViewById(R.id.bienvennue_text);
+        messageAccueil.setText("Bienvennue "+test);
 
-        TabHost tabHost = (TabHost) this.findViewById(R.id.tabhost);
+        /*TabHost tabHost = (TabHost) this.findViewById(R.id.tabhost);
         tabHost.setup();
         TabHost.TabSpec tspec1 = tabHost.newTabSpec("Profil_tab");
         tspec1.setIndicator("Profil");

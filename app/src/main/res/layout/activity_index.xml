@@ -1,60 +1,68 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="fill_parent"
+    android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".IndexActivity"
     android:clickable="false"
+    android:orientation="vertical"
     android:background="#ffff9126">
 
-    <TabHost
-        android:id="@+id/tabhost"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+    <TextView
 
-            <TabWidget
-                android:id="@android:id/tabs"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            </TabWidget>
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="25dp"
+        android:textStyle="bold"
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+        android:id="@+id/bienvennue_text"
+        android:inputType="text"
+        android:gravity="center" />
 
-                <LinearLayout
-                    android:id="@+id/Profil_tab"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:id="@+id/icon_annuaire"
+        android:gravity="center"
+        android:background="@mipmap/icone_annuaire"
+        android:paddingTop="160dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/agenda_access"
+        android:text="Agenda"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingTop="160dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/profil_access"
+        android:text="Profil"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingTop="50dp" />
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/quitter"
+        android:text="Quitter"
+        android:textSize="15dp"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:paddingTop="50dp" />
+    </RelativeLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/editText3"
-                        android:text="Ici le profil de l&apos;utilisateur" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/Recherche_tab"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/editText4"
-                        android:text="Ici le menu de recherche" />
-                </LinearLayout>
-
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
-</RelativeLayout>
+</LinearLayout>
