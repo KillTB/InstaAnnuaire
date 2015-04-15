@@ -25,7 +25,7 @@ String token = login + '|' + password;
         String encode = new String(Base64.encode(token.getBytes(), Base64.DEFAULT),"UTF-8");
 encode = encode.replaceAll("\\n", "");
 
-        final String url = "http://192.168.43.169:8080/api/authentification?token="+encode ;
+        final String url = "http://192.168.43.169:8080/annuaire/api/authentification?token="+encode ;
 
         URLEncoder.encode(url, "UTF-8");
         HttpClient hc = new DefaultHttpClient();

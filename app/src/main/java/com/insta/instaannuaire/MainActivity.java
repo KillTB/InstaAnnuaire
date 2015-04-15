@@ -7,7 +7,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+
+import com.insta.instaannuaire.resources.Authentification;
+import com.insta.instaannuaire.resources.User;
+
+import java.net.Authenticator;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -17,23 +23,53 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-//test
         final Button button = (Button) findViewById(R.id.button_connexion1);
+
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-              //  final TextView error = (TextView) findViewById(R.id.error_connexion);
-                //error.clearComposingText();
+
+                final TextView error = (TextView) findViewById(R.id.error_connexion);
+                error.clearComposingText();
                 //error.append("Erreur de connexion");
+                final EditText login = (EditText) findViewById(R.id.mail);
+                final EditText password = (EditText) findViewById(R.id.password);
 
-                Intent activityChangeIntent = new Intent(MainActivity.this, IndexActivity.class);
+                if (login.getText().toString() == null || login.getText().toString().equals("")) {
+                    error.clearComposingText();
 
-                 //currentContext.startActivity(activityChangeIntent);
+                    error.setText("Email vide !");
+                } else if (password.getText().toString() == null || password.getText().toString().equals("")) {
+                    error.clearComposingText();
 
-                MainActivity.this.startActivity(activityChangeIntent);
+                    error.setText("Mot de passe vide !");
+                } else {
+try {
+    String authentification = Authentification.authentificate(login.getText().toString(), password.getText().toString());
+
+                    if(authentification!=null){
+                        Intent activityChangeIntent = new Intent(MainActivity.this, IndexActivity.class);
+                        activityChangeIntent.putExtra("user",authentification);
+                        MainActivity.this.startActivity(activityChangeIntent);
+                    }
+
+
+
+                    else {
+                        error.clearComposingText();
+                        error.setText("Email/Mot de passe invalide");
+                    }
+}
+catch (Exception e){
+    e.printStackTrace();
+}
+
+                }
+                  //  Intent activityChangeIntent = new Intent(MainActivity.this, IndexActivity.class);
+
+                //currentContext.startActivity(activityChangeIntent);
+
             }
         });
-
 
 
     }
@@ -60,8 +96,6 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-
 
 
 }

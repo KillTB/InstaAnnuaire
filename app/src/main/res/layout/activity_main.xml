@@ -61,7 +61,7 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
-            android:id="@+id/editText"
+            android:id="@+id/mail"
             android:layout_gravity="center_horizontal"
             android:background="#ffd9d9d9" />
 
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
             android:ems="10"
-            android:id="@+id/editText2"
+            android:id="@+id/password"
             android:layout_gravity="center_horizontal"
             android:background="#ffd9d9d9"
             android:password="true" />

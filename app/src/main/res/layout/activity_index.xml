@@ -27,7 +27,8 @@
 
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:id="@+id/content_logo">
 
         <ImageView
             android:layout_width="40dp"
@@ -37,8 +38,8 @@
             android:background="@mipmap/icone_annuaire"
             android:layout_row="4"
             android:layout_column="10"
-            android:layout_alignBottom="@+id/agenda_access"
-            android:layout_toStartOf="@+id/agenda_access" />
+            android:layout_alignTop="@+id/agenda_access"
+            android:layout_toStartOf="@+id/quitter" />
         <ImageView
             android:layout_width="40dp"
             android:layout_height="35dp"
