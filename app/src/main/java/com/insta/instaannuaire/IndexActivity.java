@@ -2,6 +2,7 @@ package com.insta.instaannuaire;
 
 import android.app.Activity;
 import android.app.TabActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -23,6 +24,20 @@ public class IndexActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_index);
+        String test="test";
+        final TextView messageAccueil = (TextView) findViewById(R.id.bienvennue_text);
+        messageAccueil.setText("Bienvennue " + test);
+
+        final TextView annuaireAccess = (TextView) findViewById(R.id.agenda_access);
+        annuaireAccess.setOnClickListener(new View.OnClickListener() {
+
+
+            public void onClick(View v) {
+
+
+            }
+        });
+
 /*
         TabHost tabHost = (TabHost) this.findViewById(R.id.tabhost);
         tabHost.setup();
