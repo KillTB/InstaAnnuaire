@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-    <TextView
+        <TextView
 
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -24,45 +24,76 @@
         android:gravity="center" />
 
     </LinearLayout>
+
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical">
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="20dp"
-        android:id="@+id/icon_annuaire"
-        android:gravity="center"
-        android:background="@mipmap/icone_annuaire"
-        android:paddingTop="160dp" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/agenda_access"
-        android:text="Agenda"
-        android:textSize="15dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:paddingTop="160dp" />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/profil_access"
-        android:text="Profil"
-        android:textSize="15dp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:paddingTop="50dp" />
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:id="@+id/icon_agenda"
+            android:gravity="center"
+            android:background="@mipmap/icone_annuaire"
+            android:layout_row="4"
+            android:layout_column="10"
+            android:layout_alignBottom="@+id/agenda_access"
+            android:layout_toStartOf="@+id/agenda_access" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:id="@+id/icon_profil"
+            android:gravity="center"
+            android:background="@mipmap/icon_profil"
+            android:layout_column="10"
+            android:layout_alignBottom="@+id/profil_access"
+            android:layout_toStartOf="@+id/profil_access" />
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="35dp"
+            android:id="@+id/icon_exit"
+            android:gravity="center"
+            android:background="@mipmap/icon_exit"
+            android:layout_column="10"
+            android:layout_alignBottom="@+id/quitter"
+            android:layout_toStartOf="@+id/quitter" />
+
         <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/agenda_access"
+        android:text="Annuaire"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textStyle="bold"
+            android:layout_marginBottom="80dp"
+            android:layout_above="@+id/quitter"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:id="@+id/quitter"
         android:text="Quitter"
-        android:textSize="15dp"
+        android:textSize="25dp"
         android:gravity="center"
         android:textStyle="bold"
-        android:paddingTop="50dp" />
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="46dp"
+            android:layout_below="@+id/icon_profil"
+            android:layout_alignEnd="@+id/agenda_access" />
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/profil_access"
+        android:text="Profil"
+        android:textSize="25dp"
+        android:gravity="center"
+        android:textStyle="bold"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
     </RelativeLayout>
 
 </LinearLayout>
